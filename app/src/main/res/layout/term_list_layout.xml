@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:id="@+id/termList">
+
+    <TextView
+        android:id="@+id/termId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/termTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textColor="#000"
+        android:textSize="25sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/termTitle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Start Date:"/>
+
+        <TextView
+            android:id="@+id/termStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="#000"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="End Date:"/>
+
+        <TextView
+            android:id="@+id/termEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:textColor="#000"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

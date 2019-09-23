@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/createMentorHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mentor Creation"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/mentorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/createMentorHeader"
+        android:layout_marginTop="10dp"
+        android:text="Name:"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/createMentorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mentorName"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:hint="John Doe"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/mentorEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/createMentorName"
+        android:layout_marginTop="10dp"
+        android:text="Email:"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/createMentorEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mentorEmail"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="jdoe@domain.com"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/mentorPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/createMentorEmail"
+        android:layout_marginTop="10dp"
+        android:text="Phone:"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/createMentorPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mentorPhone"
+        android:ems="10"
+        android:inputType="phone"
+        android:textColor="#000"
+        android:maxLength="14"
+        android:hint="xxxxxxxxxx"/>
+
+    <Button
+        android:id="@+id/createMentorSaveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/createMentorCancelBtn"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/createMentorCancelBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Cancel"
+        />
+
+</RelativeLayout>
+

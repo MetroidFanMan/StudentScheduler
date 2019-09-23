@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.project.scheduler">
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".CreateMentor"/>
+        <activity
+            android:name=".AssessmentList"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".CourseList"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".TermList"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".CreateAssessment"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".CreateCourse"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".CreateTerm"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ShowCourse" />
+        <activity
+            android:name=".ShowTerm"
+            android:parentActivityName=".TermList" />
+        <activity android:name=".ShowAssessment" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".NotificationReceiver" />
+    </application>
+
+</manifest>
