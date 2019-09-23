@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/createTermHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Term Creation"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:layout_alignParentTop="true"/>
+
+
+    <EditText
+        android:id="@+id/createTermTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/createTermHeader"
+        android:ems="10"
+        android:hint="Title (i.e. Spring Term 2019)"
+        android:inputType="text"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/termStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/createTermTitle"
+        android:layout_marginTop="10dp"
+        android:text="Start Date:"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/createTermSDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/createTermTitle"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/termStartDate"
+        android:ems="10"
+        android:hint="Select a Date"
+        android:textAlignment="viewEnd"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/termEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/createTermSDate"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="End Date:"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/createTermEDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/createTermSDate"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/termEndDate"
+        android:ems="10"
+        android:hint="Select a Date"
+        android:textAlignment="viewEnd"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/createTermCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/createTermEDate"
+        android:layout_marginTop="10dp"
+        android:text="Add a course +"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <ListView
+        android:id="@+id/createTermCourseListView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/createTermCourse"
+        android:layout_above="@+id/createTermSaveBtn"
+        android:layout_marginTop="10dp"
+        android:nestedScrollingEnabled="true"/>
+
+    <Button
+        android:id="@+id/createTermSaveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Save"
+        android:layout_above="@+id/createTermCancelBtn"/>
+
+    <Button
+        android:id="@+id/createTermCancelBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

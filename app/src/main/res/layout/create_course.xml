@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/createCourseHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Course Creation"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:layout_alignParentTop="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/createCourseSaveBtn"
+        android:layout_below="@+id/createCourseHeader"
+        android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:id="@+id/createCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/createCourseTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Title (i.e. C195 Android Development)"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/courseStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/createCourseTitle"
+                android:layout_marginTop="10dp"
+                android:text="Start Date:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/createCourseSDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/createCourseTitle"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/courseStartDate"
+                android:ems="10"
+                android:hint="Select a Date"
+                android:textAlignment="viewEnd"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/courseEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/createCourseSDate"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="End Date:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/createCourseEDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/createCourseSDate"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/courseEndDate"
+                android:ems="10"
+                android:hint="Select a Date"
+                android:textAlignment="viewEnd"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/createCourseTerm"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/createCourseEDate"
+                android:layout_marginTop="10dp"
+                android:contentDescription="term" />
+
+            <Spinner
+                android:id="@+id/createCourseStatus"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/createCourseTerm"
+                android:layout_marginTop="10dp"
+                android:contentDescription="status" />
+
+            <TextView
+                android:id="@+id/createCourseMentor"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/createCourseStatus"
+                android:layout_marginTop="10dp"
+                android:text="Add a mentor +"
+                android:textAlignment="center"
+                android:textSize="20sp"/>
+
+            <ListView
+                android:id="@+id/createCourseMentorListView"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/createCourseMentor"
+                android:nestedScrollingEnabled="true"
+                android:longClickable="true"/>
+
+            <TextView
+                android:id="@+id/createCourseAssessment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/createCourseMentorListView"
+                android:layout_marginTop="10dp"
+                android:text="Add an assessment +"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <ListView
+                android:id="@+id/createCourseAssessListView"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_below="@+id/createCourseAssessment"
+                android:nestedScrollingEnabled="true" />
+
+            <TextView
+                android:id="@+id/courseNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/createCourseAssessListView"
+                android:layout_marginTop="10dp"
+                android:text="Notes:"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/createCourseNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/courseNotes"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:textColor="#000" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/createCourseSaveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/createCourseCancelBtn"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/createCourseCancelBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Cancel"
+        />
+
+</RelativeLayout>
+

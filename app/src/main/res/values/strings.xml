@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Scheduler</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Student Scheduler</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_terms">Terms</string>
+    <string name="nav_courses">Courses</string>
+    <string name="nav_assessments">Assessments</string>
+    <string name="nav_communicate">Communicate</string>
+    <string name="nav_email">E-mail</string>
+    <string name="nav_sms">SMS</string>
+</resources>
